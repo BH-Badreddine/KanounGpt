@@ -12,10 +12,13 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
+print("SECRET_KEY loaded as :", SECRET_KEY)  
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -63,6 +66,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
 
+# Deployment settings
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 TEMPLATES = [
     {
