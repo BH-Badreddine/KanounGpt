@@ -1,0 +1,11 @@
+django 
+djangorestframework
+django-cors-headers
+
+langchain-google-genai
+langchain_openai
+langchain
+chromadb
+python-dotenv 
+
+yagmail
